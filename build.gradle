@@ -39,7 +39,7 @@ dependencies {
 	implementation 'org.hibernate.orm:hibernate-community-dialects:6.2.7.Final'
 
 	// mysql
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	implementation 'mysql:mysql-connector-java:8.0.32'
 
 	//json parser
 	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
