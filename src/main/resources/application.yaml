@@ -18,11 +18,12 @@ spring:
       max-file-size: 20MB
 
   datasource:
-    url: jdbc:sqlite:db.sqlite
-    driver-class-name: org.sqlite.JDBC
+    url: jdbc:mysql://final-where-db.cbkadlp3xczq.ap-northeast-2.rds.amazonaws.com:3306/finalproject?serverTimezone=Asia/Seoul
+    username: admin
+    password: ${MYSQL_SECRET}
 
   jpa:
-    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
       ddl-auto: update
@@ -42,3 +43,9 @@ spring:
       port: 6379
       host: 127.0.0.1
 
+jwt:
+  secret: ${JWT_TOKEN}
+  accessExpirationTime: 3600
+
+NAVER_MAP_CLIENT_ID: ${NAVER_MAP_CLIENT_ID}
+NAVER_MAP_CLIENT_SECRET: ${NAVER_MAP_CLIENT_SECRET}
