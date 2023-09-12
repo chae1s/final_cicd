@@ -19,12 +19,11 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:/final-where-db.cbkadlp3xczq.ap-northeast-2.rds.amazonaws.com:3306/finalproject?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://final-where-db.cbkadlp3xczq.ap-northeast-2.rds.amazonaws.com:3306/finalproject?serverTimezone=Asia/Seoul
     username: admin
     password: ${MYSQL_SECRET}
 
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
       ddl-auto: update
