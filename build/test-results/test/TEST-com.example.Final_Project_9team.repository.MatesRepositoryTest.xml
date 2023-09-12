@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.Final_Project_9team.repository.MatesRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:22:24" hostname="DESKTOP-78V6LAM" time="0.168">
+  <properties/>
+  <testcase name="일정 작성자 등록" classname="com.example.Final_Project_9team.repository.MatesRepositoryTest" time="0.164"/>
+  <testcase name="matesRepositoryIsNotNull()" classname="com.example.Final_Project_9team.repository.MatesRepositoryTest" time="0.003"/>
+  <system-out><![CDATA[2023-09-12T23:22:21.903+09:00  INFO 7088 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.Final_Project_9team.repository.MatesRepositoryTest]: MatesRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-12T23:22:21.943+09:00  INFO 7088 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.Final_Project_9team.FinalProject9teamApplication for test class com.example.Final_Project_9team.repository.MatesRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.2)
+
+2023-09-12T23:22:21.995+09:00  INFO 7088 --- [    Test worker] c.e.F.repository.MatesRepositoryTest     : Starting MatesRepositoryTest using Java 17.0.5 with PID 7088 (started by user in C:\Users\user\Desktop\project\workspace\final_cicd)
+2023-09-12T23:22:21.996+09:00  INFO 7088 --- [    Test worker] c.e.F.repository.MatesRepositoryTest     : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T23:22:22.167+09:00  INFO 7088 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-12T23:22:22.168+09:00  INFO 7088 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T23:22:22.248+09:00  INFO 7088 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 19 JPA repository interfaces.
+2023-09-12T23:22:22.331+09:00  INFO 7088 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T23:22:22.347+09:00  INFO 7088 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T23:22:22.347+09:00  INFO 7088 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T23:22:22.350+09:00  INFO 7088 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-09-12T23:22:22.352+09:00  INFO 7088 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@35408036
+2023-09-12T23:22:22.352+09:00  INFO 7088 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-09-12T23:22:22.377+09:00  WARN 7088 --- [    Test worker] o.h.boot.model.internal.EntityBinder     : HHH000457: Joined inheritance hierarchy [com.example.Final_Project_9team.entity.item.Item] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2023-09-12T23:22:22.451+09:00  INFO 7088 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+Hibernate: 
+    create table HT_item(id bigint not null, hib_sess_id char(36) not null, primary key (id, hib_sess_id))
+Hibernate: 
+    create table HTE_item(restaurant_category tinyint, HTE_IDENTITY bigint integer, charge bigint, created_at timestamp, id bigint, modified_at timestamp, dtype varchar(31) not null, hib_sess_id char(36) not null, accom_count varchar(255), book_tour varchar(255), cat1 varchar(255), cat2 varchar(255), cat3 varchar(255), check_in_time varchar(255), check_out_time varchar(255), chk_pet varchar(255), content_id varchar(255), content_type_id varchar(255), cpyrgt_div_cd varchar(255), exp_age_range varchar(255), exp_guide varchar(255), first_image varchar(255), first_image2 varchar(255), first_menu varchar(255), full_address varchar(255), home_page varchar(255), info varchar(255), info_center varchar(255), info_center_food varchar(255), info_center_lodging varchar(255), latitude varchar(255), lcns_no varchar(255), longitude varchar(255), m_level varchar(255), name varchar(255), open_date varchar(255), open_time varchar(255), open_time_food varchar(255), over_view varchar(255), packing varchar(255), parking varchar(255), parking_food varchar(255), parking_lodging varchar(255), reservation_food varchar(255), reservation_url varchar(255), rest_date varchar(255), room_capacity varchar(255), room_type varchar(255), seat varchar(255), sido varchar(255), sigungu varchar(255), tel varchar(255), treat_menu varchar(255), upmyundong varchar(255), use_fee varchar(255), user_time varchar(255), primary key (HTE_IDENTITY, hib_sess_id))
+Hibernate: 
+    create table HTE_restaurant(restaurant_category tinyint, HTE_IDENTITY bigint integer, created_at timestamp, id bigint, modified_at timestamp, dtype varchar(31) not null, hib_sess_id char(36) not null, book_tour varchar(255), cat1 varchar(255), cat2 varchar(255), cat3 varchar(255), content_id varchar(255), content_type_id varchar(255), cpyrgt_div_cd varchar(255), first_image varchar(255), first_image2 varchar(255), first_menu varchar(255), full_address varchar(255), home_page varchar(255), info_center_food varchar(255), latitude varchar(255), lcns_no varchar(255), longitude varchar(255), m_level varchar(255), name varchar(255), open_time varchar(255), open_time_food varchar(255), over_view varchar(255), packing varchar(255), parking_food varchar(255), reservation_food varchar(255), rest_date varchar(255), seat varchar(255), sido varchar(255), sigungu varchar(255), tel varchar(255), treat_menu varchar(255), upmyundong varchar(255), primary key (HTE_IDENTITY, hib_sess_id))
+Hibernate: 
+    create table HTE_attraction(HTE_IDENTITY bigint integer, charge bigint, created_at timestamp, id bigint, modified_at timestamp, dtype varchar(31) not null, hib_sess_id char(36) not null, accom_count varchar(255), book_tour varchar(255), cat1 varchar(255), cat2 varchar(255), cat3 varchar(255), chk_pet varchar(255), content_id varchar(255), content_type_id varchar(255), cpyrgt_div_cd varchar(255), exp_age_range varchar(255), exp_guide varchar(255), first_image varchar(255), first_image2 varchar(255), full_address varchar(255), home_page varchar(255), info_center varchar(255), latitude varchar(255), longitude varchar(255), m_level varchar(255), name varchar(255), open_date varchar(255), open_time varchar(255), over_view varchar(255), parking varchar(255), rest_date varchar(255), sido varchar(255), sigungu varchar(255), tel varchar(255), upmyundong varchar(255), use_fee varchar(255), user_time varchar(255), primary key (HTE_IDENTITY, hib_sess_id))
+Hibernate: 
+    create table HTE_accommodation(HTE_IDENTITY bigint integer, created_at timestamp, id bigint, modified_at timestamp, dtype varchar(31) not null, hib_sess_id char(36) not null, book_tour varchar(255), cat1 varchar(255), cat2 varchar(255), cat3 varchar(255), check_in_time varchar(255), check_out_time varchar(255), content_id varchar(255), content_type_id varchar(255), cpyrgt_div_cd varchar(255), first_image varchar(255), first_image2 varchar(255), full_address varchar(255), home_page varchar(255), info varchar(255), info_center_lodging varchar(255), latitude varchar(255), longitude varchar(255), m_level varchar(255), name varchar(255), open_time varchar(255), over_view varchar(255), parking_lodging varchar(255), reservation_url varchar(255), rest_date varchar(255), room_capacity varchar(255), room_type varchar(255), sido varchar(255), sigungu varchar(255), tel varchar(255), upmyundong varchar(255), primary key (HTE_IDENTITY, hib_sess_id))
+2023-09-12T23:22:22.776+09:00  INFO 7088 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T23:22:22.794+09:00  INFO 7088 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T23:22:23.196+09:00  INFO 7088 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-12T23:22:24.331+09:00  INFO 7088 --- [    Test worker] c.e.F.repository.MatesRepositoryTest     : Started MatesRepositoryTest in 2.374 seconds (process running for 8.966)
+Hibernate: 
+    select
+        s1_0.id,
+        c1_0.id,
+        c1_0.room_name,
+        s1_0.description,
+        s1_0.display,
+        s1_0.end_date,
+        s1_0.is_deleted,
+        s1_0.sido,
+        s1_0.start_date,
+        s1_0.sum_distance,
+        s1_0.sum_duration,
+        s1_0.title,
+        s1_0.user_id 
+    from
+        schedule s1_0 
+    left join
+        chat_room c1_0 
+            on s1_0.id=c1_0.schedule_id 
+    where
+        s1_0.id=?
+Hibernate: 
+    insert 
+    into
+        schedule
+        (description,display,end_date,is_deleted,sido,start_date,sum_distance,sum_duration,title,user_id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        mates
+        (created_at,is_accepted,is_deleted,is_host,modified_at,schedule_id,user_id) 
+    values
+        (?,?,?,?,?,?,?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
